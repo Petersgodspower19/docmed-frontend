@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+.logo{
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #318CE7;
+    cursor: pointer;
+}
+.s{
+    color: #4d4d4d;
+}
+/* .a{
+    color:;
+} */
+.a:hover{
+    color: skyblue;
+    text-decoration: underline;
+}
+#hero {
+    background: url("./pages/home/img/heroBg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Full-screen loader container */
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    width: 100vw; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50; 
+  }
+  
+  
+  .loader {
+    width: 50px; /* Diameter of the loader */
+    height: 50px; /* Ensures it's a circle */
+    border-radius: 50%; /* Makes it circular */
+    background: #318CE7;
+    --_m: 
+      conic-gradient(#318CE7 25%, #0000 0%),
+      linear-gradient(#fff 0 0) content-box;
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+    animation: l3 1s infinite linear;
+  
+    padding: 12px; 
+    background: #318CE7;
+  }
+
+  
+  
+  @keyframes l3 {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  
+.input{
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.input:focus{
+    border: 1px solid #87ceeb;
+}
+.button{
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    color:#87ceeb;
+    border: 2px solid #87ceeb;
+    width: 100px;
+    text-transform: uppercase;
+}
+
+@media(max-width:768px){
+    .doctors{
+        flex-wrap: wrap;
+    }
+    .doctor{
+        width: 80%;
+        margin: auto;
+    }
+}
